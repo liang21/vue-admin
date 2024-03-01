@@ -7,7 +7,18 @@
     <title>Vite + Vue + TS</title>
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app">
+      <style lang="scss">
+        html,
+        body,
+        #app {
+          width: 100%;
+          height: 100%;
+          padding: 0;
+          margin: 0;
+        }
+      </style>
+    </div>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
