@@ -9,8 +9,13 @@ declare module 'vue' {
   export interface GlobalComponents {
     403: typeof import('./src/components/ErrMessage/403.vue')['default']
     404: typeof import('./src/components/ErrMessage/404.vue')['default']
+    ElAside: typeof import('element-plus/es')['ElAside']
     ElButton: typeof import('element-plus/es')['ElButton']
+    ElContainer: typeof import('element-plus/es')['ElContainer']
+    ElHeader: typeof import('element-plus/es')['ElHeader']
+    ElMenu: typeof import('element-plus/es')['ElMenu']
     ElRow: typeof import('element-plus/es')['ElRow']
+    ElScrollbar: typeof import('element-plus/es')['ElScrollbar']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }
