@@ -1,31 +1,19 @@
 <template>
-  <el-container class="layout">
-    <el-aside>
-      <div class="aside-box">
-        <div class="logo flx-center">
-          <img class="logo-img" src="@/assets/images/logo.svg" alt="logo" />
-          <!-- <span v-show="!isCollapse" class="logo-text"></span> -->
-        </div>
-        <el-scrollbar>
-          <el-menu :router="false" :default-active="activeMenu" :collapse-transition="false">
-            <SubMenu :menu-list="menuList" />
-          </el-menu>
-        </el-scrollbar>
-      </div>
-    </el-aside>
+  <div class="common-layout">
     <el-container>
-      <el-header>
-        <ToolBarLeft />
-      </el-header>
-      <Main />
+      <el-aside width="200px">Aside</el-aside>
+      <el-container>
+        <el-header>Header</el-header>
+        <el-main>Main</el-main>
+        <el-footer>
+          <Footer />
+        </el-footer>
+      </el-container>
     </el-container>
-  </el-container>
+  </div>
 </template>
+
 <script setup lang="ts">
-import { computed } from 'vue';
-import { useRoute } from 'vue-router';
-import menuList from '@/utils/menuList';
-const route = useRoute();
-const activeMenu = computed(() => (route.meta.activeMenu ? route.meta.activeMenu : route.path) as string);
+import Footer from '@/layouts/components/Footer/index.vue';
 </script>
-<style scoped lang="scss"></style>
+<style scoped></style>
